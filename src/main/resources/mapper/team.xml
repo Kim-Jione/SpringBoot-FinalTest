@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.domain.team.TeamDao">
+
+	<insert id="insert">
+		INSERT INTO team(NAME, stadiumId)
+		VALUES(#{name}, #{stadiumId})
+	</insert>
+
+
+	<update id="update">
+
+	</update>
+
+	<delete id="deleteById">
+
+	</delete>
+
+	<select id="findAll"
+		resultType="com.example.demo.domain.team.Team">
+		SELECT * FROM team
+	</select>
+
+	<select id="findById">
+
+
+	</select>
+
+</mapper>

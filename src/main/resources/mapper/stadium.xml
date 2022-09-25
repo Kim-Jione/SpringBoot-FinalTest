@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.domain.stadium.StadiumDao">
+
+	<insert id="insert">
+		INSERT INTO stadium(name, createDate) 
+		VALUES(#{name}, now()) 
+		
+	</insert>
+
+
+	<update id="update">
+
+	</update>
+
+	<delete id="deleteById">
+
+	</delete>
+
+	<select id="findAll"
+		resultType="com.example.demo.domain.stadium.Stadium">
+		SELECT id, name, createDate, 
+		(SELECT COUNT(*) + 1 FROM stadium WHERE name <![CDATA[<]]> s.name) AS no
+		FROM stadium s
+		ORDER BY id
+	</select>
+
+	<select id="findById">
+
+
+	</select>
+
+</mapper>
